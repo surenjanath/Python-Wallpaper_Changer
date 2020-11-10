@@ -2,14 +2,15 @@
 This program changes wallpaper.
 
 I've coded this small python program in python using the selenium module. 
+
 What it does : 
 - Go to stocksnap.io
 - Randomly gets a number of page to scroll down range(1,12)
 - Get's the ID of the photo
-- Run it again the photos that have already downloaded to avoid duplicates
-- If ID found then it randomly chooses another number from a range of 0 , amount of    pictures found 
+- Run it against the photos that have already downloaded to avoid duplicates
+- If ID found then it randomly chooses another number from a range of 0 , amount of  pictures found 
 - Downloads the picture
-- It always checks to see if picture is found and if not it waits 
+- It then always checks to see if picture is found and if not it waits < this means it's downloading >
 - After picture found, it sets it as wallpaper. :) 
 
 
