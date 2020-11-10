@@ -1,5 +1,5 @@
 import time
-from selenium import webdriver
+from selenium import webdriver #pip install selenium if dont have it
 from selenium.webdriver.chrome.options import Options
 import random
 import os
