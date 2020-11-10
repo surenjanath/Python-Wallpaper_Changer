@@ -24,4 +24,7 @@ that is being your directory for chrome to download the file and the directory f
 Also use "pip install selenium" if you don't have the selenium module.
 
 PS : I'm new to python and took lot of googling to get it to work *wink
+
+
+
 Link to youtube video : https://youtu.be/lLHOnyOKA2E
