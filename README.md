@@ -21,6 +21,6 @@ Modules          : selenium , time, os, random and cytypes
 I will assume python users will download this so 
 there are two (2) codes you will need to change 
 that is being your directory for chrome to download the file and the directory for the wallpaper to find the folder that the pictures are located in.
-
+Also use "pip install selenium" if you don't have the selenium module.
 
 PS : I'm new to python and took lot of googling to get it to work *wink
