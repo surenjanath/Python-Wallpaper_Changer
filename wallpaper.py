@@ -72,7 +72,7 @@ def main():
             print(' New Picture ID : '+str(val)+'\n')
             
         else:
-            print(' Duplicate Found. Getting New ID')
+            print(' All Good. No DUPLICATES')
             break
 
 
@@ -113,7 +113,7 @@ def main():
     #Change TO DOWNLOAD FOLDER FROM ABOVE HERE :  
     setting_Wallpaper("C:\\Users\\Surenjanath\\Desktop\\Project CovID -19\\Wallpaper Changer\\Pictures\\"+  Filename  +  ID  +'.jpg')
     time.sleep(3)
-    print('\n\n DONE !')
+    print('\n DONE !')
     print("-------------------------------")
     
 
