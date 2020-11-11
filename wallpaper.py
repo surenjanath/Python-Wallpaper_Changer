@@ -1,5 +1,5 @@
 import time
-from selenium import webdriver #pip install selenium if dont have it
+from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import random
 import os
@@ -29,7 +29,12 @@ def main():
     chromedriver_path = os.getcwd() + '/chromedriver'
     driver = webdriver.Chrome(executable_path = chromedriver_path, options = chrome_options)
 
+    print("-------------------------------")
+    print("\t  Wallpaper")
+    print("-------------------------------")
 
+    print('\n\n Loading Website')
+    
     url = "https://stocksnap.io/search/"
     search = 'landscape'
     driver.get('https://stocksnap.io/view-photos/sort/trending/desc')
@@ -42,21 +47,10 @@ def main():
         time.sleep(1)
     print('\n')    
             
-
-
-
-    
     photos_1 = driver.find_elements_by_class_name('photo-grid-item')
 
-
-
-
-
-
-
-
     val = random.randint(0, len(photos_1))
-    print(' Random Chosen : '+str(val)+'\n')
+    print(' Picture Number  : '+str(val)+'\n')
     time.sleep(1)
     print(' Amount of Pictures Found : '+str(len(photos_1))+'\n')
 
@@ -75,9 +69,10 @@ def main():
         if os.path.exists('./Pictures/'  +  Filename  +  ID  +'.jpg'):
             
             val = random.randint(0, len(photos_1))
-            print(' Random Chosen : '+str(val)+'\n')
+            print(' New Picture ID : '+str(val)+'\n')
             
-        else: 
+        else:
+            print(' Duplicate Found. Getting New ID')
             break
 
 
@@ -96,13 +91,13 @@ def main():
     
 
     
-
-    print(' Please Wait ',end="",flush=True)
+    print('\n Downloading Picture. ')
+    print('\n Please Wait ',end="",flush=True)
     time.sleep(5)
     while Downloaded==False:
         if os.path.exists('./Pictures/'  +  Filename  +  ID  +'.jpg'):
-            time.sleep(1)
-            print('\n File Downloaded \n')
+            time.sleep(2)
+            print('\n\n File Downloaded \n')
             Downloaded = True
             time.sleep(2)
             driver.close()
@@ -111,12 +106,15 @@ def main():
         else:
             print('.',end="",flush=True)
             time.sleep(4)
-    time.sleep(1)        
+    time.sleep(1)
+    print("-------------------------------")
     print( ' Setting Wallpaper')
+    print("-------------------------------")
     #Change TO DOWNLOAD FOLDER FROM ABOVE HERE :  
     setting_Wallpaper("C:\\Users\\Surenjanath\\Desktop\\Project CovID -19\\Wallpaper Changer\\Pictures\\"+  Filename  +  ID  +'.jpg')
     time.sleep(3)
-    print('\n DONE !')
+    print('\n\n DONE !')
+    print("-------------------------------")
     
 
 main()
